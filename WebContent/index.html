@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Frontend</title>
+<meta charset="ISO-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
+  <script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "index.html",
+    })
+    .when("/Signup", {
+        templateUrl : "Signup.html",
+        controller : "signupCtrl"
+    })
+    .when("/Login", {
+        templateUrl : "Login.html",
+        controller : "loginCtrl"
+    });
+});
+
+app.controller("signupCtrl", function ($scope) {
+
+});
+app.controller("loginCtrl", function ($scope) {
+});
+
+</script>
+  
+</head>
+<header ng-include="'Header.html'"></header>
+<!-- <body background="E:\Keerthi\Chat images\chat4" />
+ -->
+ <body ng-app="myApp">
+ 
+ <div ng-view></div>
+
+  
+</body>
+<br>
+  <br>
+  </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+<p><a href="#index">main</a></p>
+
+
+<div  ng-controller="logCtrl,signCtrl" > 
+
+ <h1>
+hiiiiiiiiiiiiiiii</h1>
+
+</div>
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "index.html",
+    })
+    .when("/Signup", {
+        templateUrl : "Signup.html",
+        controller : "signupCtrl"
+    })
+    .when("/login", {
+        templateUrl : "Login.html",
+        controller : "loginCtrl"
+    });
+});
+
+app.controller("signupCtrl", function ($scope) {
+
+});
+app.controller("loginCtrl", function ($scope) {
+});
+
+</script>
+
+<header ng-include="'Header.html'"></header>
+<body ng-app="myApp">
+ <div ng-view></div>
+</body>
+
+ </html> -->
